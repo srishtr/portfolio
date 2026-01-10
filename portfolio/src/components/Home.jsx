@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight, Instagram } from 'lucide-react';
+import BreachVR from '../assets/BreachVR.jpg';
+import VerdiNyheter from '../assets/Verdi_Nyheter.jpeg';
+import MeGreece from '../assets/Me_Greece.jpeg';
+import ISAT from '../assets/ISAT.JPG';
 
 const Home = () => {
   const [text, setText] = useState('');
@@ -8,7 +12,7 @@ const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const words = ["Fullstack Developer", "Problem Solver", "Pharmacist", "Ambitious"];
+  const words = ["Fullstack Developer", "Problem Solver", "Pharmacist", "Ambitious", "Forever Student", "Foodie", "Travel Enthusiast"];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -20,7 +24,7 @@ const Home = () => {
         : fullText.substring(0, text.length + 1)
       );
 
-      setTypingSpeed(isDeleting ? 50 : 150);
+      setTypingSpeed(isDeleting ? 25 : 30);
 
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 2000); 
@@ -40,7 +44,7 @@ const Home = () => {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.9 }}
           className="hero-text"
         >
           <span className="greeting">Hello, I'm</span>
@@ -49,14 +53,6 @@ const Home = () => {
             {text}<span className="cursor">|</span>
           </p>
           
-          <div className="cta-container">
-            <a href="#projects" className="primary-btn">
-              View Work <ArrowRight size={18} />
-            </a>
-            <a href="#contact" className="secondary-btn">
-              Contact Me
-            </a>
-          </div>
 
           <div className="social-links">
             <a href="https://github.com/srishtr" target="_blank" rel="noopener noreferrer" className="social-icon">
@@ -65,7 +61,7 @@ const Home = () => {
             <a href="https://www.linkedin.com/in/srishti-rohatgi-a821b066" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Linkedin size={24} />
             </a>
-            <a href="https://https://www.instagram.com/srishtir_98/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.instagram.com/srishtir_98" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Instagram size={24} />
             </a>
             <a href="mailto:srishti.rohatgi26@gmail.com" className="social-icon">
@@ -75,20 +71,28 @@ const Home = () => {
         </motion.div>
         
         <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="hero-image"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 20 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="hero-visuals"
         >
-          {/* Placeholder for profile image or an abstract graphic */}
-          <div className="profile-placeholder">
-            <div className="blob"></div>
-            <img src="https://ui-avatars.com/api/?name=Srishti+Rohatgi&background=646cff&color=fff&size=256" alt="Profile" className="profile-img" />
+          <div className="visual-card card-1">
+            <img src={BreachVR} alt="BreachVR Project" />
+          </div>
+          <div className="visual-card card-2">
+            <img src={MeGreece} alt="Srishti in Greece" />
+          </div>
+          <div className="visual-card card-3">
+            <img src={VerdiNyheter} alt="Verdi Nyheter" />
+          </div>
+          <div className="visual-card card-4">
+            <img src={ISAT} alt="ISAT" />
           </div>
         </motion.div>
       </div>
     </div>
   );
 };
+
 
 export default Home;
