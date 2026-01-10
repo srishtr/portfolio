@@ -1,8 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight, Instagram } from 'lucide-react';
 
 const Home = () => {
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const words = ["Fullstack Developer", "Problem Solver", "Pharmacist", "Ambitious"];
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const i = loopNum % words.length;
+      const fullText = words[i];
+
+      setText(isDeleting 
+        ? fullText.substring(0, text.length - 1) 
+        : fullText.substring(0, text.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 50 : 150);
+
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 2000); 
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum]);
+
   return (
     <div className="home-section">
       <div className="hero-content">
@@ -14,10 +45,8 @@ const Home = () => {
         >
           <span className="greeting">Hello, I'm</span>
           <h1 className="name">Srishti Rohatgi</h1>
-          <h2 className="title">Frontend Developer & <span className="highlight">UI/UX Enthusiast</span></h2>
-          <p className="description">
-            I craft responsive, user-friendly web experiences with modern technologies.
-            Passionate about building clean code and beautiful interfaces.
+          <p className="description" style={{ minHeight: '30px' }}>
+            {text}<span className="cursor">|</span>
           </p>
           
           <div className="cta-container">
@@ -33,13 +62,13 @@ const Home = () => {
             <a href="https://github.com/srishtr" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/srishti-rohatgi-a821b066" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Linkedin size={24} />
             </a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://https://www.instagram.com/srishtir_98/" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Instagram size={24} />
             </a>
-            <a href="mailto:your.email@example.com" className="social-icon">
+            <a href="mailto:srishti.rohatgi26@gmail.com" className="social-icon">
               <Mail size={24} />
             </a>
           </div>

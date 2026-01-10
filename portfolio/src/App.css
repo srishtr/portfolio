@@ -228,13 +228,12 @@
   font-size: 5rem;
   line-height: 1.1;
   margin: 0 0 1rem 0;
-  /* Pastel Gradient for Text */
-  background: linear-gradient(to right, #B298DC, #FFB7B2); 
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
+  color: rgba(178, 152, 220, 0.8); /* Slightly darker, majestic purple */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800; /* Extra bold */
   letter-spacing: -2px;
+  /* Removed the gradient background-clip to allow solid darker color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Elegant shadow */
 }
 
 .title {
@@ -264,11 +263,12 @@
 }
 
 .description {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 2.5rem;
-  max-width: 500px;
-  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: var(--soft-text);
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .cta-container {
@@ -468,4 +468,17 @@ h2::after {
   height: 4px;
   background: var(--baby-pink);
   border-radius: 2px;
+}
+
+/* Blinking cursor animation */
+.cursor {
+  display: inline-block;
+  font-weight: 100;
+  color: var(--soft-text);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
