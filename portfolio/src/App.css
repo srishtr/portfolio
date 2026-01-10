@@ -592,3 +592,141 @@ h2::after {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* About Me Creative Styles */
+.about-container {
+  padding: 2rem 0;
+}
+
+.about-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 3rem;
+}
+
+.sparkle-icon {
+  color: var(--baby-yellow);
+  animation: spin-slow 4s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.about-intro {
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: linear-gradient(120deg, var(--baby-pink) 0%, rgba(255,255,255,0) 100%);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+}
+
+.about-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(178, 152, 220, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(178, 152, 220, 0.15);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.pharmacy-card .card-icon {
+  background: var(--baby-pink);
+  box-shadow: 0 8px 20px rgba(255, 183, 178, 0.4);
+}
+
+.cs-card .card-icon {
+  background: var(--baby-blue);
+  box-shadow: 0 8px 20px rgba(162, 219, 250, 0.4);
+}
+
+.finance-card {
+  grid-column: span 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.finance-card .card-icon {
+  background: var(--baby-yellow);
+  box-shadow: 0 8px 20px rgba(226, 240, 203, 0.4);
+}
+
+.about-card h3 {
+  font-size: 1.4rem;
+  color: var(--soft-text);
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-card p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.about-conclusion {
+  grid-column: span 2;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255,245,248,0.5) 100%);
+  border-radius: 30px;
+  border: 2px dashed var(--baby-pink);
+}
+
+.brain-icon {
+  color: var(--baby-purple);
+  margin-bottom: 1rem;
+}
+
+.conclusion-content p {
+  font-size: 1.1rem;
+  color: var(--soft-text);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-intro, .finance-card, .about-conclusion {
+    grid-column: span 1;
+  }
+}
