@@ -7,7 +7,6 @@ import Education from './components/Education'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Verv from './components/Verv'
-import ExtraCurricular from './components/ExtraCurricular'
 import './App.css'
 
 function App() {
@@ -29,9 +28,6 @@ function App() {
         </section>
         <section id="verv">
           <Verv />
-        </section>
-        <section id="extracurricular">
-          <ExtraCurricular />
         </section>
         <section id="skills">
           <Skills />
