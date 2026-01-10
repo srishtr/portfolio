@@ -880,25 +880,13 @@ h2::after {
   border-color: var(--baby-pink);
 }
 
-.verv-logo-container {
-  width: 120px;
-  height: 120px; /* Larger logos for grid */
-  background: white;
-  border-radius: 50%; /* Circle look */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0; /* Removed padding to cover full circle */
-  overflow: hidden; /* Ensures image stays within circle */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  border: 1px solid #f0f0f0;
-  margin-bottom: 1.5rem;
-}
-
 .verv-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Covers the entire circle */
+  width: 140px;
+  height: 140px;
+  object-fit: cover; /* Fills the rounded shape */
+  border-radius: 30px; /* Soft, rounded corners */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Shadow directly on the image */
+  margin-bottom: 1.5rem; /* Replaces container margin */
 }
 
 .verv-details {
@@ -945,5 +933,155 @@ h2::after {
   .verv-grid {
     grid-template-columns: 1fr; /* Stack on mobile */
     max-width: 400px;
+  }
+}
+
+/* Projects Section Styles */
+.projects-container {
+  padding: 2rem 0;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* Large spacing between projects */
+  width: 100%;
+}
+
+.project-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+/* Alternate order for variety (optional, check preference) - let's keep it uniform for now as requested "under each other" */
+/* If you want zigzag:
+.project-row:nth-child(even) {
+  flex-direction: row-reverse;
+} 
+*/
+
+.project-image-container {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+  height: 350px; /* Fixed height for uniformity */
+}
+
+.project-image-container:hover {
+  transform: scale(1.02);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.project-row h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+
+.status-badge.completed {
+  background-color: rgba(72, 187, 120, 0.1);
+  color: #2f855a;
+}
+
+.status-badge.under-construction {
+  background-color: rgba(236, 201, 75, 0.15);
+  color: #b7791f;
+}
+
+.status-badge.proof-of-concept {
+  background-color: rgba(66, 153, 225, 0.1);
+  color: #2b6cb0;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.tech-tag {
+  background: white;
+  color: var(--accent);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--baby-pink);
+  box-shadow: 0 2px 10px rgba(178, 152, 220, 0.1);
+}
+
+.learnings {
+  border-left: 4px solid var(--baby-yellow);
+  padding-left: 1.5rem;
+}
+
+.learnings-label {
+  display: block;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.learnings p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--soft-text);
+  font-style: italic;
+}
+
+@media (max-width: 960px) {
+  .project-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .project-image-container {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .project-row h3 {
+    font-size: 1.6rem;
   }
 }

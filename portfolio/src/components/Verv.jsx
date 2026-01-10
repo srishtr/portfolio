@@ -54,9 +54,7 @@ const Verv = () => {
             transition={{ delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="verv-logo-container">
-              <img src={verv.logo} alt={`${verv.organization} logo`} className="verv-logo" />
-            </div>
+            <img src={verv.logo} alt={`${verv.organization} logo`} className="verv-logo" />
             
             <div className="verv-details">
               <h3>{verv.organization}</h3>
