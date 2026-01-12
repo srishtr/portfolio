@@ -969,7 +969,7 @@ h2::after {
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0,0,0,0.1);
   transition: transform 0.4s ease;
-  height: 350px; /* Fixed height for uniformity */
+  height: auto; /* Allow image to define height */
 }
 
 .project-image-container:hover {
@@ -978,8 +978,7 @@ h2::after {
 
 .project-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* Natural aspect ratio */
   display: block;
 }
 
@@ -1078,10 +1077,86 @@ h2::after {
   
   .project-image-container {
     width: 100%;
-    height: 250px;
+    height: auto;
   }
   
   .project-row h3 {
     font-size: 1.6rem;
+  }
+}
+
+/* Skills Section Styles - Floating Fancy Layout */
+.skills-container {
+  padding: 4rem 0;
+}
+
+.skills-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.skill-category-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--baby-purple) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-pill {
+  background: white;
+  color: var(--soft-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  border: 1px solid rgba(178, 152, 220, 0.2);
+  box-shadow: 0 4px 10px rgba(178, 152, 220, 0.05);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+
+.skill-pill:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: var(--baby-pink);
+  box-shadow: 0 8px 15px rgba(255, 209, 220, 0.4);
+  color: var(--accent);
+}
+
+.skill-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--baby-pink) 0%, rgba(255,255,255,0) 100%);
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .skill-pill {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
   }
 }

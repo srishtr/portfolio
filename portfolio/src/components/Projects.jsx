@@ -3,13 +3,15 @@ import { motion } from 'framer-motion';
 import { Layout, Code, ExternalLink } from 'lucide-react';
 import breachVR from '../assets/BreachVR.jpg';
 import portfolio from '../assets/Portfolio-img.png';
+import lasermatrix from '../assets/laser-matrix.png';
+import under_construction from '../assets/cooming-soon.png';
 
 const Projects = () => {
     const projects = [
         {
             title: "Investment Company Website",
             status: "Under construction",
-            image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Investment+Website", // Placeholder
+            image: under_construction,
             technologies: ["React", "Tailwind CSS", "Vite"],
             description:
                 "A corporate website for an investment company focused on clarity, trust, and performance.",
@@ -29,7 +31,7 @@ const Projects = () => {
         {
             title: "VR Game for Blind People",
             status: "Proof of concept",
-            image: breachVR,
+            image: lasermatrix,
             technologies: ["Unity", "C#", "Spatial Audio"],
             description:
                 "A VR experience using spatial audio and haptic feedback to enable navigation without sight.",
@@ -39,7 +41,7 @@ const Projects = () => {
         {
             title: "Wedding Website",
             status: "Under construction",
-            image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Wedding+Site", // Placeholder
+            image: under_construction, // Placeholder
             technologies: ["React", "Tailwind CSS"],
             description:
                 "A personalized wedding website with event details, RSVP, and gallery.",
