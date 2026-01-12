@@ -1156,3 +1156,263 @@ h2::after {
     gap: 2rem;
   }
 }
+
+/* Contact Section Styles */
+.contact-container {
+  padding: 4rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border: 1px solid rgba(178, 152, 220, 0.1);
+  height: 100%;
+}
+
+.contact-info-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.contact-text {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(178, 152, 220, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.info-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+
+.info-link, .info-text {
+  color: var(--black);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.info-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.contact-socials h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--soft-text);
+}
+
+.social-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #f8f8f8;
+  border-radius: 50px;
+  text-decoration: none;
+  color: var(--soft-text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.contact-social-btn:hover {
+  background: var(--baby-pink);
+  color: white;
+  transform: translateY(-2px);
+  border-color: var(--baby-pink);
+  box-shadow: 0 5px 15px rgba(255, 209, 220, 0.4);
+}
+
+/* Form Styles */
+.contact-form-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--soft-text);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  background: #fcfcfc;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: var(--black);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--baby-purple);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(178, 152, 220, 0.1);
+}
+
+.send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #D4C1EC 0%, #B298DC 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(178, 152, 220, 0.3);
+}
+
+.send-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(178, 152, 220, 0.4);
+  background: linear-gradient(135deg, #B298DC 0%, #9b89b3 100%);
+}
+
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info-card, .contact-form-container {
+    padding: 2rem;
+  }
+}
+
+/* Age Guessing Game Styles */
+.age-game-container {
+  grid-column: span 2; /* Spans full width to be centered */
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%; /* Ensure it takes full width of the spanned columns */
+}
+
+.age-buttons-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.age-option-btn {
+  background: white;
+  border: 2px solid var(--baby-pink);
+  color: var(--soft-text);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 60px;
+  height: 60px; /* Circular or squarish buttons */
+  border-radius: 50%; /* Make them round */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(178, 152, 220, 0.1);
+}
+
+.age-option-btn:hover {
+  background: var(--baby-pink);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 183, 178, 0.4);
+}
+
+.age-option-btn:active {
+  transform: scale(0.95);
+}
+
+.guess-feedback {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.guess-feedback.correct {
+  color: #2f855a;
+  background-color: rgba(72, 187, 120, 0.1);
+  border: 1px solid rgba(72, 187, 120, 0.2);
+}
+
+.guess-feedback.wrong {
+  color: #c53030;
+  background-color: rgba(245, 101, 101, 0.1);
+  border: 1px solid rgba(245, 101, 101, 0.2);
+}

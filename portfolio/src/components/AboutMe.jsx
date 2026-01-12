@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Pill, Code, TrendingUp, Brain, Sparkles } from 'lucide-react';
 
 const AboutMe = () => {
+  const [guessMessage, setGuessMessage] = useState(null);
+  const [guessStatus, setGuessStatus] = useState(''); // 'correct' or 'wrong'
+
+  const handleAgeGuess = (age) => {
+    if (age === 27) {
+      setGuessMessage("You are a genius! 👍");
+      setGuessStatus('correct');
+    } else {
+      setGuessMessage("Guess again");
+      setGuessStatus('wrong');
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -75,17 +88,25 @@ const AboutMe = () => {
           </p>
         </motion.div>
 
-        <motion.div className="about-conclusion" variants={itemVariants}>
-          <div className="conclusion-content">
-            <Brain className="brain-icon" size={40} />
-            <p>
-              What ties everything together is a strong curiosity for how systems work and how good decisions are made. 
-              Whether it’s improving a treatment plan, solving a technical problem, or evaluating an investment, 
-              I like breaking things down, understanding the details, and finding better solutions. 
-              I don’t focus much on titles or hype—I prefer learning, doing solid work, and letting the results speak for themselves.
-            </p>
+      
+         <div className="age-game-container">
+            <div className="age-buttons-row">
+              <button onClick={() => handleAgeGuess(40)} className="age-option-btn">40</button>
+              <button onClick={() => handleAgeGuess(27)} className="age-option-btn">27</button>
+              <button onClick={() => handleAgeGuess(32)} className="age-option-btn">32</button>
+            </div>
+            
+            {guessMessage && (
+              <motion.div 
+                key={guessMessage}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`guess-feedback ${guessStatus}`}
+              >
+                {guessMessage}
+              </motion.div>
+            )}
           </div>
-        </motion.div>
 
       </motion.div>
     </div>

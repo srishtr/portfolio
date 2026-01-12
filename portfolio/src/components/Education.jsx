@@ -12,7 +12,7 @@ const Education = () => {
       year: "2022 - Present", 
       location: "Trondheim, Norway",
       logo: ntnuLogo,
-      description: "Specializing in Software Development and have focused."
+      description: "Specializing in Software Development and have had subjects related to training AI and ML-models."
     },
     {
       school: "OsloMet",
