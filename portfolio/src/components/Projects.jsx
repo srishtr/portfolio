@@ -86,10 +86,12 @@ const Projects = () => {
                                 ))}
                             </div>
                             
-                            <div className="learnings">
-                                <span className="learnings-label">Key Learnings:</span>
-                                <p>{project.learned}</p>
-                            </div>
+                            {project.learned && (
+                                <div className="learnings">
+                                    <span className="learnings-label">Key Learnings:</span>
+                                    <p>{project.learned}</p>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
                 ))}
