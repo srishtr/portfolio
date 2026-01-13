@@ -9,16 +9,6 @@ import under_construction from '../assets/cooming-soon.png';
 const Projects = () => {
     const projects = [
         {
-            title: "Investment Company Website",
-            status: "Under construction",
-            image: under_construction,
-            technologies: ["React", "Tailwind CSS", "Vite"],
-            description:
-                "A corporate website for an investment company focused on clarity, trust, and performance.",
-            learned:
-                "Designing for credibility, structuring content for investors, and building reusable UI components."
-        },
-        {
             title: "Web Portfolio",
             status: "Completed",
             image: portfolio,
@@ -29,24 +19,31 @@ const Projects = () => {
                 "Component-based design, layout consistency, and visual hierarchy."
         },
         {
-            title: "VR Game for Blind People",
+            title: "Laser Matrix - echoes of the motion",
             status: "Proof of concept",
             image: lasermatrix,
             technologies: ["Unity", "C#", "Spatial Audio"],
             description:
-                "A VR experience using spatial audio and haptic feedback to enable navigation without sight.",
+                "A VR experience using spatial audio and haptic feedback to enable navigation without sight. This VR game was developed during the course Customer Driven Project. The game is based on Laser Matrix developed by Breach VR. Breach was our customer and wanted to test if their game could be played by visually impaired individuals.",
             learned:
-                "Accessibility-first design, non-visual UX, and rapid prototyping."
+                "Scrum, team collaboration, Unity 6, spatial audio integration, adjusting to customer demand, VR-game, Meta Ocular Quest 2."
+        },
+         {
+            title: "Investment Company Website",
+            status: "Under construction",
+            image: under_construction,
+            technologies: ["not decided yet as this is a very new project"],
+            description:
+                "A website for an investment company. The website will focus on the companies core principles, showcasing their projects and their CEO",
+        
         },
         {
             title: "Wedding Website",
             status: "Under construction",
             image: under_construction, // Placeholder
-            technologies: ["React", "Tailwind CSS"],
+            technologies: ["not decided yet"],
             description:
-                "A personalized wedding website with event details, RSVP, and gallery.",
-            learned:
-                "Client-oriented design, emotional storytelling, and responsive layouts."
+                "This is a personal project for my own wedding. It's under development and is expected to be ready by summer 2026.",
         }
     ];
 
@@ -58,7 +55,7 @@ const Projects = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
             >
-                <h2>Projects <Layout className="header-icon" size={28} /></h2>
+                <h2>Projects</h2>
             </motion.div>
 
             <div className="projects-list">

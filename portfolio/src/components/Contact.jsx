@@ -30,7 +30,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
             >
-                <h2>Let's Connect <MessageSquare className="header-icon" size={28} /></h2>
+                <h2>Let's Connect</h2>
             </motion.div>
 
             <div className="contact-grid">

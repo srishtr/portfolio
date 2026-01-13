@@ -10,26 +10,26 @@ const Verv = () => {
     {
       organization: "Verdi NTNU",
       role: "Board Member", // Add specific role if known, or generic
-      year: "2023 - Present", 
+      year: "2023 - 2025", 
       location: "Trondheim, Norway",
       logo: verdiLogo,
-      description: "Student association for digitization and innovation at NTNU."
+      description: "NTNU's largest finance association. With a fund of more than 700 000 NOK. We do stock analysis and manage a portfolio to gain practical experience in finance and investment strategies.."
     },
     {
       organization: "ISAT NTNU",
       role: "Member",
-      year: "2022 - 2023",
+      year: "2023 - 2025",
       location: "Trondheim, Norway",
       logo: isatLogo,
-      description: "International Student Association of Trondheim."
+      description: "Co-Founder, former CFO, former CEO. ISAT is a student association for students with indian background or interesst in indian culture. It is a social platform. We started with 3 members and now they have more than 100 members ."
     },
     {
       organization: "AbaInvest",
       role: "Analyst",
-      year: "2023 - Present",
+      year: "2025 - Present",
       location: "Trondheim, Norway",
       logo: ntnuLogo, // Placeholder
-      description: "Student-run investment fund at NTNU."
+      description: "Student-run investment fund for Abakus at NTNU. We do stock analysis and manage a portfolio to gain practical experience in finance and investment strategies."
     }
   ];
 
@@ -41,7 +41,7 @@ const Verv = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <h2>Student Associations <Users className="header-icon" size={28} /></h2>
+        <h2>Student Associations</h2>
       </motion.div>
 
       <div className="verv-grid">

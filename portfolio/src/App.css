@@ -326,7 +326,7 @@
 
 .greeting {
   font-size: 1.8rem;
-  color: var(--accent);
+  color: #ff9eb5;
   font-weight: 600;
   display: block;
   margin-bottom: 0.5rem;
@@ -337,7 +337,7 @@
   font-size: 5rem;
   line-height: 1.1;
   margin: 0 0 1rem 0;
-  color: rgba(178, 152, 220, 0.8); /* Slightly darker, majestic purple */
+  color: #ff9eb5; /* Slightly darker baby pink */
   font-family: 'Poppins', sans-serif;
   font-weight: 800; /* Extra bold */
   letter-spacing: -2px;
@@ -865,27 +865,24 @@ h2::after {
   flex-direction: column; /* Stack logo and text vertically */
   align-items: center; /* Center everything */
   text-align: center; /* Center text */
-  background: white;
-  padding: 2.5rem 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border: 1px solid rgba(178, 152, 220, 0.1);
+  background: transparent;
+  padding: 1.5rem 1rem;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
   transition: all 0.3s ease;
   height: 100%; /* Equal height cards */
 }
 
 .verv-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(178, 152, 220, 0.2);
-  border-color: var(--baby-pink);
+  transform: translateY(-5px);
+  /* No box shadow or border on hover */
 }
 
 .verv-logo {
   width: 140px;
   height: 140px;
-  object-fit: cover; /* Fills the rounded shape */
-  border-radius: 30px; /* Soft, rounded corners */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Shadow directly on the image */
+  object-fit: contain; /* Shows the full logo */
   margin-bottom: 1.5rem; /* Replaces container margin */
 }
 
@@ -1354,6 +1351,13 @@ h2::after {
   align-items: center;
   gap: 1rem;
   width: 100%; /* Ensure it takes full width of the spanned columns */
+}
+
+.age-game-prompt {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 
 .age-buttons-row {

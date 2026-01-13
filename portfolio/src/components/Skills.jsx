@@ -57,7 +57,7 @@ export default function Skills() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <h2>My Skills <Sparkles className="header-icon" size={28} /></h2>
+        <h2>My Skills</h2>
       </motion.div>
 
       <motion.div 

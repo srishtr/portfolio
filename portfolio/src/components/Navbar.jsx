@@ -14,7 +14,6 @@ const Navbar = () => {
         { path: '#education', name: 'Education', icon: <GraduationCap size={20} /> },
         { path: '#projects', name: 'Projects', icon: <Briefcase size={20} /> },
         { path: '#verv', name: 'Associations', icon: <Users size={20} /> },
-        { path: '#extracurricular', name: 'Activities', icon: <Star size={20} /> },
         { path: '#skills', name: 'Skills', icon: <Code size={20} /> },
         { path: '#contact', name: 'Contact', icon: <Mail size={20} /> },
     ];

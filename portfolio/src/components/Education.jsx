@@ -32,7 +32,7 @@ const Education = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <h2>Education <GraduationCap className="header-icon" size={28} /></h2>
+        <h2>Education</h2>
       </motion.div>
 
       <div className="education-grid">

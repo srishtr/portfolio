@@ -43,7 +43,7 @@ const AboutMe = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <h2>About Me <Sparkles className="sparkle-icon" size={24} /></h2>
+        <h2>About Me</h2>
       </motion.div>
       
       <motion.div 
@@ -88,8 +88,9 @@ const AboutMe = () => {
           </p>
         </motion.div>
 
-      
+
          <div className="age-game-container">
+            <p className="age-game-prompt">Go ahead guess</p>
             <div className="age-buttons-row">
               <button onClick={() => handleAgeGuess(40)} className="age-option-btn">40</button>
               <button onClick={() => handleAgeGuess(27)} className="age-option-btn">27</button>
