@@ -29,7 +29,8 @@ const Verv = () => {
       year: "2025 - Present",
       location: "Trondheim, Norway",
       logo: ntnuLogo, // Placeholder
-      description: "Student-run investment fund for Abakus at NTNU. We do stock analysis and manage a portfolio to gain practical experience in finance and investment strategies."
+      description: "Student-run investment fund for Abakus at NTNU. We do stock analysis and manage a portfolio to gain practical experience in finance and investment strategies.",
+      link: "https://abakus.no/pages/grupper/128-abainvest"
     }
   ];
 
@@ -70,6 +71,22 @@ const Verv = () => {
               </div>
               
               <p className="verv-description">{verv.description}</p>
+              {verv.link && (
+                <a 
+                  href={verv.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ 
+                    color: 'var(--accent)', 
+                    fontWeight: 500, 
+                    marginTop: '0.5rem', 
+                    textDecoration: 'none',
+                    borderBottom: '1px solid var(--accent)'
+                  }}
+                >
+                  Visit Website
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
