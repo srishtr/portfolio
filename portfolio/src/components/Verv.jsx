@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Calendar, MapPin } from 'lucide-react';
-import verdiLogo from '../assets/verdi-logo.png';
-import isatLogo from '../assets/isat-logo.png';
+import verdiLogo from '../assets/Verdi-logo.png';
+import isatLogo from '../assets/Isat-logo.png';
 import ntnuLogo from '../assets/ntnu-logo-png.png'; // Placeholder for AbaInvest
 
 const Verv = () => {
