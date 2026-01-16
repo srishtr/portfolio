@@ -684,11 +684,11 @@ h2::after {
 }
 
 .about-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border: 1px solid rgba(178, 152, 220, 0.1);
+  background: transparent;
+  padding: 1.5rem; /* Slightly reduced padding */
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -696,7 +696,7 @@ h2::after {
 
 .about-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(178, 152, 220, 0.15);
+  /* No box shadow on hover */
 }
 
 .card-icon {
