@@ -661,16 +661,18 @@ h2::after {
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   width: 100%;
+  max-width: 800px; /* Keep content readable width */
+  margin: 0 auto;
 }
 
 .about-intro {
-  grid-column: span 2;
   text-align: center;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .intro-text {
@@ -685,63 +687,77 @@ h2::after {
 
 .about-card {
   background: transparent;
-  padding: 1.5rem; /* Slightly reduced padding */
+  padding: 1rem 0; /* Minimized vertical padding */
   border-radius: 0;
   box-shadow: none;
   border: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1.5rem;
+  text-align: left;
+  align-items: start;
 }
 
 .about-card:hover {
-  transform: translateY(-5px);
-  /* No box shadow on hover */
+  transform: translateX(10px); /* Slide right instead of up */
 }
 
 .card-icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
   color: white;
+  grid-row: 1; /* Icon sits in first row */
+  grid-column: 1;
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
+/* Specific card colors */
 .pharmacy-card .card-icon {
   background: var(--baby-pink);
-  box-shadow: 0 8px 20px rgba(255, 183, 178, 0.4);
+  box-shadow: 0 4px 10px rgba(255, 183, 178, 0.4);
 }
 
 .cs-card .card-icon {
   background: var(--baby-blue);
-  box-shadow: 0 8px 20px rgba(162, 219, 250, 0.4);
+  box-shadow: 0 4px 10px rgba(162, 219, 250, 0.4);
 }
 
 .finance-card {
-  grid-column: span 2;
-  max-width: 800px;
-  margin: 0 auto;
+  /* Reset previous grid/margin styles */
+  margin: 0;
+  max-width: none;
 }
 
 .finance-card .card-icon {
   background: var(--baby-yellow);
-  box-shadow: 0 8px 20px rgba(226, 240, 203, 0.4);
+  box-shadow: 0 4px 10px rgba(226, 240, 203, 0.4);
 }
 
 .about-card h3 {
   font-size: 1.4rem;
   color: var(--soft-text);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-family: 'Poppins', sans-serif;
+  grid-row: 1;
+  grid-column: 2;
+  align-self: center; /* Center horizontally with icon */
 }
 
 .about-card p {
   color: #666;
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 1rem;
+  grid-row: 2;
+  grid-column: 2; /* Align text with title, leaving space under icon */
+  margin-top: 0.5rem;
 }
 
 .about-conclusion {
