@@ -5,11 +5,11 @@ import { Sparkles, Code2, Database, Layout, PenTool, Terminal } from 'lucide-rea
 const skills = [
   {
     category: "Programming Languages",
-    items: ["Java", "Python", "TypeScript", "JavaScript"],
+    items: ["Java","Python", "TypeScript", "JavaScript", "SQL", "C#"],
   },
   {
     category: "Frontend Development",
-    items: ["React", "Tailwind CSS", "Vite", "Responsive UI Design"],
+    items: ["React", "Tailwind CSS", "Vite", "Responsive UI Design", "Astro"],
   },
   {
     category: "Tools & Workflow",
@@ -21,15 +21,19 @@ const skills = [
   },
   {
     category: "Analysis & Business",
-    items: ["Financial Analysis", "DCF Analysis", "Requirements Analysis"],
+    items: ["Financial Analysis", "DCF Analysis", "Requirements Analysis", "Multiple Case Analysis", "SWOT Analysis", "Market Research"],
   },
   {
     category: "Enterprise Systems",
     items: ["DIPS", "Aposys", "Farmapro", "Nissy"],
   },
   {
+    category: "Platforms",
+    items: ["Vercel", "One.com", "Namecheap"],
+  },
+  {
     category: "Productivity",
-    items: ["Microsoft Office Suite"],
+    items: ["Microsoft Office Suite", "Scrum", "Agile Methodologies"],
   },
 ];
 
