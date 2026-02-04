@@ -5,9 +5,21 @@ import breachVR from '../assets/BreachVR.jpg';
 import portfolio from '../assets/Portfolio-img.png';
 import lasermatrix from '../assets/laser-matrix.png';
 import under_construction from '../assets/cooming-soon.png';
+import HKS_website from '../assets/HKS_webpage.png';
+
 
 const Projects = () => {
     const projects = [
+        {
+            title: "HKS Investment AS, Company Website",
+            status: "completed",
+            image: HKS_website,
+            technologies: ["Astro, Tailwind CSS"],
+            description:
+                "A website for an investment company. The website will focus on the companies core principles, showcasing their projects and their CEO",
+            link: "https://www.hksinvest.no"
+        },
+
         {
             title: "Web Portfolio",
             status: "Completed",
@@ -28,15 +40,7 @@ const Projects = () => {
             learned:
                 "Scrum, team collaboration, Unity 6, spatial audio integration, adjusting to customer demand, VR-game, Meta Ocular Quest 2."
         },
-         {
-            title: "Investment Company Website",
-            status: "Under construction",
-            image: under_construction,
-            technologies: ["not decided yet as this is a very new project"],
-            description:
-                "A website for an investment company. The website will focus on the companies core principles, showcasing their projects and their CEO",
-        
-        },
+         
         {
             title: "Wedding Website",
             status: "Under construction",
@@ -79,6 +83,26 @@ const Projects = () => {
                             </span>
                             
                             <p className="project-description">{project.description}</p>
+
+                            {project.link && (
+                                <a 
+                                  href={project.link} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem',
+                                    marginBottom: '1rem',
+                                    color: 'var(--accent)',
+                                    fontWeight: '600',
+                                    textDecoration: 'none'
+                                  }}
+                                  className="project-link"
+                                >
+                                  Visit Website <ExternalLink size={16} />
+                                </a>
+                            )}
                             
                             <div className="tech-stack">
                                 {project.technologies.map((tech, i) => (
