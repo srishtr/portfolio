@@ -8,11 +8,11 @@ const Education = () => {
   const educationData = [
     {
       school: "NTNU",
-      degree: "Master i Datateknologi",
+      degree: "Masters in Computer Science (Computer Engineer) ",
       year: "2022 - Present", 
       location: "Trondheim, Norway",
       logo: ntnuLogo,
-      description: "Specializing in Software Development and have had subjects related to training AI and ML-models."
+      description: "Specializing in Software Development. Relevant coursework includes: Information Systems (A), Software Architecture (B), Data Powered Software (A), Software Security and Data Privacy (B), Applied Data Science (C), Digital Economics, Customer Driven Project (B), Experts in Team (A)."
     },
     {
       school: "OsloMet",
