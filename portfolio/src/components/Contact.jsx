@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, Send, MessageSquare, MapPin } from 'lucide-react';
 
 const Contact = () => {
+    const [status, setStatus] = useState(''); // '', 'sending', 'success', 'error'
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -14,12 +16,41 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Construct mailto link
-        const mailtoLink = `mailto:srishti.rohatgi26@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
-        
-        window.location.href = mailtoLink;
+        setStatus('sending');
+
+        const data = {
+            ...formData,
+            access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'e6449125-2af1-4066-b067-9cb884609505'
+        };
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                setTimeout(() => setStatus(''), 5000);
+            } else {
+                console.log("Error", result);
+                setStatus('error');
+                setTimeout(() => setStatus(''), 5000);
+            }
+        } catch (error) {
+            console.log("Error", error);
+            setStatus('error');
+            setTimeout(() => setStatus(''), 5000);
+        }
     };
 
     return (
@@ -143,9 +174,21 @@ const Contact = () => {
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="send-btn">
-                            Send Message <Send size={18} />
+                        <button type="submit" className="send-btn" disabled={status === 'sending'}>
+                            {status === 'sending' ? 'Sending...' : 'Send Message'} <Send size={18} />
                         </button>
+                        
+                        {status === 'success' && (
+                            <p style={{ color: '#4ade80', marginTop: '1rem', fontSize: '0.9rem' }}>
+                                Message sent successfully! I'll get back to you soon.
+                            </p>
+                        )}
+                        
+                        {status === 'error' && (
+                            <p style={{ color: '#ef4444', marginTop: '1rem', fontSize: '0.9rem' }}>
+                                Something went wrong. Please try again or email me directly at srishti.rohatgi26@gmail.com.
+                            </p>
+                        )}
                     </form>
                 </motion.div>
             </div>
