@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { Users, Calendar, MapPin } from 'lucide-react';
 import verdiLogo from '../assets/Verdi-logo.png';
 import isatLogo from '../assets/Isat-logo.png';
-import ntnuLogo from '../assets/ntnu-logo-png.png'; // Placeholder for AbaInvest
+import ntnuLogo from '../assets/AbaInvest.png'; 
 
 const Verv = () => {
   const vervData = [
     {
       organization: "Verdi NTNU",
-      role: "Board Member", // Add specific role if known, or generic
+      role: "Board Member", 
       year: "2023 - 2025", 
       location: "Trondheim, Norway",
       logo: verdiLogo,
@@ -28,7 +28,7 @@ const Verv = () => {
       role: "Analyst",
       year: "2025 - Present",
       location: "Trondheim, Norway",
-      logo: ntnuLogo, // Placeholder
+      logo: ntnuLogo, 
       description: "Student-run investment fund for Abakus at NTNU. We do stock analysis and manage a portfolio to gain practical experience in finance and investment strategies.",
       link: "https://abakus.no/pages/grupper/128-abainvest"
     }
