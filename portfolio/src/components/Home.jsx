@@ -64,9 +64,6 @@ const Home = () => {
             <a href="https://www.instagram.com/srishtir_98" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Instagram size={24} />
             </a>
-            <a href="mailto:srishti.rohatgi26@gmail.com" className="social-icon">
-              <Mail size={24} />
-            </a>
           </div>
         </motion.div>
         
