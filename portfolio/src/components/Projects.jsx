@@ -6,6 +6,7 @@ import portfolio from '../assets/Portfolio-img.png';
 import lasermatrix from '../assets/laser-matrix.png';
 import under_construction from '../assets/cooming-soon.png';
 import HKS_website from '../assets/HKS_webpage.png';
+import KnowledgeBase from '../assets/KnowledgeBase.png';
 
 
 const Projects = () => {
@@ -13,7 +14,7 @@ const Projects = () => {
         {
             title: "Knowledgebased RAG Chatbot",
             status: "completed",
-            image: under_construction,
+            image: KnowledgeBase,
             technologies: ["Docker, PostgreSQL + pgvector, Streamlit, Redis, SentenceTransformer, Python, anthropic, Claude Sonnet 4.6"],
             description:
                 "This is my private RAG (Retrieval-Augmented Generation) chatbot built with Streamlit, designed as an academic knowledge base. I upload a pdf-file, and the system splits it into overlapping text chunks, then it generates vector embeddings for each chunk, and stores them in PostgreSQL with pgvector extension. When I ask a question, it embeds my query, finds the 3 most semantically similar chunks, and sends them as context to Claude. Claude answers using ONLY that retrieved context.",
