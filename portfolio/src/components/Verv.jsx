@@ -13,7 +13,8 @@ const Verv = () => {
       year: "2023 - 2025", 
       location: "Trondheim, Norway",
       logo: verdiLogo,
-      description: "NTNU's largest finance association. With a fund of more than 700 000 NOK. We do stock analysis and manage a portfolio to gain practical experience in finance and investment strategies.."
+      description: "NTNU's largest finance association. With a fund of more than 700 000 NOK. We do stock analysis and manage a portfolio to gain practical experience in finance and investment strategies.",
+      link: "https://www.verdintnu.no/"
     },
     {
       organization: "ISAT NTNU",
@@ -21,7 +22,9 @@ const Verv = () => {
       year: "2023 - 2025",
       location: "Trondheim, Norway",
       logo: isatLogo,
-      description: "Co-Founder, former CFO, former CEO. ISAT is a student association for students with indian background or interesst in indian culture. It is a social platform. We started with 3 members and now they have more than 100 members ."
+      description: "Co-Founder, former CFO, former CEO. ISAT is a student association for students with indian background or interesst in indian culture. It is a social platform. We started with 3 members and now they have more than 100 members .",
+      link: "https://www.isatapp.no/"
+
     },
     {
       organization: "AbaInvest",

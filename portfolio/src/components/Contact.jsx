@@ -99,18 +99,6 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-
-                    <div className="contact-socials">
-                        <h4>Follow me</h4>
-                        <div className="social-row">
-                            <a href="https://www.linkedin.com/in/srishti-rohatgi-a821b066" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
-                                <Linkedin size={20} /> LinkedIn
-                            </a>
-                            <a href="https://github.com/srishtr" target="_blank" rel="noopener noreferrer" className="contact-social-btn">
-                                <Github size={20} /> GitHub
-                            </a>
-                        </div>
-                    </div>
                 </motion.div>
 
                 {/* Message Form */}
