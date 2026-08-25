@@ -7,6 +7,7 @@ import lasermatrix from '../assets/laser-matrix.png';
 import under_construction from '../assets/cooming-soon.png';
 import HKS_website from '../assets/HKS_webpage.png';
 import KnowledgeBase from '../assets/KnowledgeBase.png';
+import SHevents from '../assets/SHevents.png';
 
 
 const Projects = () => {
@@ -52,12 +53,12 @@ const Projects = () => {
         },
          
         {
-            title: "Wedding Website",
-            status: "Under construction",
-            image: under_construction, // Placeholder
-            technologies: ["not decided yet"],
+            title: "Events Website",
+            status: "Completed",
+            image: SHevents , // Placeholder
+            technologies: ["Firestore, OAuth, OOP"],
             description:
-                "This is a personal project for my own wedding. It's under development and is expected to be ready by summer 2026.",
+                "All of our events will be hosted on this website. Invite will be sent, RSVP, and all the information about the events will be available on this website. It is also possible to upload photos from the events and view them from a public or personal gallary"
         }
     ];
 
