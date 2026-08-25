@@ -7,7 +7,7 @@ import lasermatrix from '../assets/laser-matrix.png';
 import under_construction from '../assets/cooming-soon.png';
 import HKS_website from '../assets/HKS_webpage.png';
 import KnowledgeBase from '../assets/KnowledgeBase.png';
-import SHevents from '../assets/SHevents.png';
+import SHevents from '../assets/SHEvents.png';
 
 
 const Projects = () => {
@@ -32,6 +32,15 @@ const Projects = () => {
         },
 
         {
+            title: "Events Website",
+            status: "Completed",
+            image: SHevents , // Placeholder
+            technologies: ["Firestore, OAuth, OOP"],
+            description:
+                "All of our events will be hosted on this website. Invite will be sent, RSVP, and all the information about the events will be available on this website. It is also possible to upload photos from the events and view them from a public or personal gallary"
+        },
+
+        {
             title: "Web Portfolio",
             status: "Completed",
             image: portfolio,
@@ -50,16 +59,8 @@ const Projects = () => {
                 "A VR experience using spatial audio and haptic feedback to enable navigation without sight. This VR game was developed during the course Customer Driven Project. The game is based on Laser Matrix developed by Breach VR. Breach was our customer and wanted to test if their game could be played by visually impaired individuals.",
             learned:
                 "Scrum, team collaboration, Unity 6, spatial audio integration, adjusting to customer demand, VR-game, Meta Ocular Quest 2."
-        },
-         
-        {
-            title: "Events Website",
-            status: "Completed",
-            image: SHevents , // Placeholder
-            technologies: ["Firestore, OAuth, OOP"],
-            description:
-                "All of our events will be hosted on this website. Invite will be sent, RSVP, and all the information about the events will be available on this website. It is also possible to upload photos from the events and view them from a public or personal gallary"
         }
+        
     ];
 
     return (
