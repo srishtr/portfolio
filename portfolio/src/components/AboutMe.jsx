@@ -55,7 +55,7 @@ const AboutMe = () => {
       >
         <motion.div className="about-intro" variants={itemVariants}>
           <p className="intro-text">
-            Age is just a number—so go ahead and guess mine 😉
+            Age is just a number! So go ahead and guess mine. Here are some hints 😉
           </p>
         </motion.div>
 
@@ -63,7 +63,7 @@ const AboutMe = () => {
           <div className="card-icon"><Pill size={32} /></div>
           <h3>The Pharmacist</h3>
           <p>
-            Here’s a small hint: I have a bachelor’s degree in pharmacy, I’ve worked in several pharmacies, 
+            I have a bachelor’s degree in pharmacy, I’ve worked in several pharmacies, 
             and at one point I even ended up as <strong>Chief Pharmacist</strong>.
             I guess I don’t get bored very easily, because somewhere along the way I decided that 
             one complex field was not quite enough.
@@ -74,8 +74,8 @@ const AboutMe = () => {
           <div className="card-icon"><Code size={32} /></div>
           <h3>The Developer</h3>
           <p>
-            I’m currently in my fourth year of <strong>Computer Science</strong>, where I enjoy building software 
-            with the same attention to detail I use when working with medications.
+            I’m currently in my fifth year of <strong>Computer Science</strong> at NTNU, where I enjoy building software 
+            with the same attention to detail I use when working with medications. I've been a part of three student associations, and have worked as a pharmacist besides my studies. I am currently very fond of AI, and how to build good softwares with it.
           </p>
         </motion.div>
 
